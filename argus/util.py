@@ -56,6 +56,7 @@ EC2_SERVICE = 'ec2'
 OPEN_NEBULA_SERVICE = 'opennebula'
 CLOUD_STACK_SERVICE = 'cloudstack'
 MAAS_SERVICE = 'maas'
+NO_SERVICE = 'noservice'
 
 DEFAULT_METADATA_URL = {
     HTTP_SERVICE: "http://169.254.169.254/",
@@ -65,6 +66,7 @@ DEFAULT_METADATA_URL = {
     OPEN_NEBULA_SERVICE: "",
     MAAS_SERVICE: "",
     CONFIG_DRIVE_SERVICE: "",
+    NO_SERVICE: "",
 }
 
 SAN_POLICY_ONLINE_STR = 'OnlineAll'
