@@ -35,7 +35,7 @@ class BasePopulatedCBInitConfig(base.BaseWindowsConfig):
         util.OPEN_NEBULA_SERVICE: "opennebulaservice.OpenNebulaService",
         util.CLOUD_STACK_SERVICE: "cloudstack.CloudStack",
         util.MAAS_SERVICE: "maasservice.MaaSHttpService",
-        util.NO_SERVICE: ""
+        util.NO_SERVICE: "",
     }
 
     def __init__(self, client):
@@ -116,7 +116,7 @@ class BasePopulatedCBInitConfig(base.BaseWindowsConfig):
             service_type = [service_type]
 
         service_type = [self._get_service(serv) for serv in service_type]
-        conf_value = ",".join(service_type)
+        conf_value = ",".join(serv for serv in service_type if serv)
         self.set_conf_value("metadata_services", conf_value)
 
     def apply_config(self, path):
