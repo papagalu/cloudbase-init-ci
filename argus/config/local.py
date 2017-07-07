@@ -1,4 +1,4 @@
-# Copyright 2016 Cloudbase Solutions Srl
+# Copyright 2017 Cloudbase Solutions Srl
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
@@ -27,19 +27,15 @@ class LocalOptions(conf_base.Options):
         super(LocalOptions, self).__init__(config, group="local")
         self._options = [
             cfg.StrOpt(
-                "ip", default="", required=True,
-                help="The id of the flavor that is to be used."),
+                "ip", required=True,
+                help="The ip of the machine that is to be used."),
             cfg.StrOpt(
                 "username", default="CiAdmin", required=True,
                 help="The default username existing on Argus-CI images used "
                      "for connecting and interacting with the instance."),
             cfg.StrOpt(
-                "password", default="Passw0rd", required=True,
+                "password", required=True,
                 help="The password for the default username."),
-            cfg.BoolOpt(
-                "require_sysprep", default=True,
-                help="Specifies whether the provided image requires having "
-                     "sysprep executed before starting to run tests."),
         ]
 
     def register(self):

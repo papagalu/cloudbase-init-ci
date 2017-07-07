@@ -1,0 +1,165 @@
+time: 2017-07-03 13:24:40.542935Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_any_exception_occurred
+time: 2017-07-03 13:24:40.543141Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_any_exception_occurred [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.544011Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_disk_expanded
+time: 2017-07-03 13:24:40.544177Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_disk_expanded [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.544757Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_get_console_output
+time: 2017-07-03 13:24:40.544923Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_get_console_output [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.545533Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_hostname_set
+time: 2017-07-03 13:24:40.545696Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_hostname_set [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.546546Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_https_winrm_configured
+time: 2017-07-03 13:24:40.546804Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_https_winrm_configured [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.547428Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_licensing
+time: 2017-07-03 13:24:40.547619Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_licensing [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.548215Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_mtu
+time: 2017-07-03 13:24:40.548378Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_mtu [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.549234Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_ntp_properly_configured
+time: 2017-07-03 13:24:40.550247Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_ntp_properly_configured [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.551724Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_ntp_service_running
+time: 2017-07-03 13:24:40.551910Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_ntp_service_running [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.552523Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_password_set_from_metadata
+time: 2017-07-03 13:24:40.552708Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_password_set_from_metadata [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.553320Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_service_display_name
+time: 2017-07-03 13:24:40.553483Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_service_display_name [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.554081Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_sshpublickeys_set
+time: 2017-07-03 13:24:40.554255Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_sshpublickeys_set [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.554879Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_user_belongs_to_group
+time: 2017-07-03 13:24:40.555041Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_user_belongs_to_group [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.555639Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_username_created
+time: 2017-07-03 13:24:40.555803Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_username_created [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0
+time: 2017-07-03 13:24:40.556376Z
+tags: worker-0
+test: tests.ScenarioConfigdriveVfatCdromSmoke.test_w32time_triggers
+time: 2017-07-03 13:24:40.556537Z
+skip: tests.ScenarioConfigdriveVfatCdromSmoke.test_w32time_triggers [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+1F
+Needs special availability zone0
+]
+tags: -worker-0

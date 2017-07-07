@@ -1,0 +1,27 @@
+time: 2017-07-04 13:32:28.518689Z
+tags: worker-0
+test: setUpClass (tests.ScenarioHeatSmoke)
+time: 2017-07-04 13:32:28.518689Z
+failure: setUpClass (tests.ScenarioHeatSmoke) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+45F
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 141, in setUpClass
+    cls.availability_zone)
+  File "/root/workspace/cloudbase-init-ci/argus/backends/heat/heat_backend.py", line 52, in __init__
+    availability_zone=availability_zone)
+  File "/root/workspace/cloudbase-init-ci/argus/backends/base.py", line 55, in __init__
+    self._username = CONFIG.openstack.username
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 3288, in __getattr__
+    return self._conf._get(name, self._group)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2852, in _get
+    value = self._do_get(name, group, namespace)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2869, in _do_get
+    info = self._get_opt_info(name, group)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 3024, in _get_opt_info
+    raise NoSuchOptError(opt_name, group)
+oslo_config.cfg.NoSuchOptError: no such option username in group [openstack]
+0
+]
+tags: -worker-0

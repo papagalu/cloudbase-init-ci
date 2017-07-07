@@ -1,0 +1,17 @@
+time: 2017-07-05 12:37:15.813201Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-07-05 12:37:15.813201Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+149
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 141, in setUpClass
+    cls.availability_zone)
+  File "/root/workspace/cloudbase-init-ci/argus/backends/local/local_backend.py", line 19, in __init__
+    matadata=matadata,
+NameError: global name 'matadata' is not defined
+0
+]
+tags: -worker-0

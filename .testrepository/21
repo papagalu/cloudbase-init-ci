@@ -1,0 +1,21 @@
+time: 2017-06-29 07:03:54.461362Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-06-29 07:03:54.461362Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+274
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 151, in setUpClass
+    cls.tearDownClass()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 188, in tearDownClass
+    cls.recipe.cleanup()
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/base.py", line 206, in cleanup
+    self.delete_mock_metadata()
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/windows.py", line 287, in delete_mock_metadata
+    self.metadata_provider.delete_all_data()
+AttributeError: 'LocalBackendMixin' object has no attribute 'delete_all_data'
+0
+]
+tags: -worker-0

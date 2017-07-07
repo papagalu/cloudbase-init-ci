@@ -1,0 +1,19 @@
+time: 2017-06-29 07:42:03.622820Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-06-29 07:42:03.622820Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+206
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 144, in setUpClass
+    cls.prepare_instance()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 160, in prepare_instance
+    cls.recipe = cls.recipe_type(cls.backend)
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/windows.py", line 837, in __init__
+    super(BaseCloudbaseinitRecipe, self).__init__(backend)
+NameError: global name 'BaseCloudbaseinitRecipe' is not defined
+0
+]
+tags: -worker-0

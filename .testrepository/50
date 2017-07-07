@@ -1,0 +1,31 @@
+time: 2017-07-03 14:04:20.724907Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-07-03 14:04:20.724907Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+56B
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 144, in setUpClass
+    cls.prepare_instance()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 162, in prepare_instance
+    cls.prepare_recipe()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/cloud/base.py", line 31, in prepare_recipe
+    return cls.recipe.prepare(service_type=cls.service_type)
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/base.py", line 184, in prepare
+    self.wait_for_boot_completion()
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/windows.py", line 51, in wait_for_boot_completion
+    self._backend.remote_client.manager.wait_boot_completion()
+  File "/root/workspace/cloudbase-init-ci/argus/util.py", line 265, in __get__
+    instance.__dict__[self.name] = result = self.func(instance)
+  File "/root/workspace/cloudbase-init-ci/argus/backends/windows.py", line 36, in get_remote_client
+    return windows.WinRemoteClient(self.floating_ip(),
+  File "/root/workspace/cloudbase-init-ci/argus/backends/local/local_backend.py", line 27, in floating_ip
+    return CONFIG.local.ip
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2412, in __getattr__
+    raise NoSuchOptError(name)
+oslo_config.cfg.NoSuchOptError: no such option local in group [DEFAULT]
+0
+]
+tags: -worker-0

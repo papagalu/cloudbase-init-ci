@@ -1,0 +1,7 @@
+time: 2017-07-05 10:38:07.070775Z
+tags: worker-0
+test: tests.ScenarioNoError.test_any_exception_occurred
+time: 2017-07-05 10:38:07.954056Z
+successful: tests.ScenarioNoError.test_any_exception_occurred [ multipart
+]
+tags: -worker-0

@@ -1,0 +1,15 @@
+time: 2017-06-28 17:01:25.692290Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-06-28 17:01:25.692290Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+FC
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 141, in setUpClass
+    cls.availability_zone)
+TypeError: Can't instantiate abstract class LocalBackendMixin with abstract methods remote_client
+0
+]
+tags: -worker-0

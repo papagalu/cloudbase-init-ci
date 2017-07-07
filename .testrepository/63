@@ -1,0 +1,23 @@
+time: 2017-07-04 10:06:44.217560Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-07-04 10:06:44.217560Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+32C
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 144, in setUpClass
+    cls.prepare_instance()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 162, in prepare_instance
+    cls.prepare_recipe()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/cloud/base.py", line 31, in prepare_recipe
+    return cls.recipe.prepare(service_type=cls.service_type)
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/base.py", line 192, in prepare
+    self.prepare_cbinit_config(service_type)
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/windows.py", line 321, in prepare_cbinit_config
+    metadata_url = self.metadata_provider.get_url(service_type)
+AttributeError: 'NoneType' object has no attribute 'get_url'
+0
+]
+tags: -worker-0

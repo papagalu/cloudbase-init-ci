@@ -1,0 +1,25 @@
+time: 2017-07-07 16:01:38.377860Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-07-07 16:01:38.377860Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+3A5
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 144, in setUpClass
+    cls.prepare_instance()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 162, in prepare_instance
+    cls.prepare_recipe()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/cloud/base.py", line 31, in prepare_recipe
+    return cls.recipe.prepare(service_type=cls.service_type)
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/base.py", line 191, in prepare
+    self.replace_code()
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/windows.py", line 207, in replace_code
+    repo_url=_CBINIT_REPO, location=_CBINIT_TARGET_LOCATION)
+  File "/root/workspace/cloudbase-init-ci/argus/action_manager/windows.py", line 289, in git_clone
+    "exists.".format(location))
+argus.exceptions.ArgusCLIError: Destination path 'C:\cloudbaseinit' already exists.
+0
+]
+tags: -worker-0

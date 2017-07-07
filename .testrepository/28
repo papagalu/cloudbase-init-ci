@@ -1,0 +1,17 @@
+time: 2017-06-29 07:51:28.295533Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-06-29 07:51:28.295533Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+176
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 144, in setUpClass
+    cls.prepare_instance()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 163, in prepare_instance
+    cls.backend.save_instance_output()
+AttributeError: 'LocalBackendMixin' object has no attribute 'save_instance_output'
+0
+]
+tags: -worker-0

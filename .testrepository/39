@@ -1,0 +1,17 @@
+time: 2017-07-03 08:18:22.116220Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-07-03 08:18:22.116220Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+162
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 144, in setUpClass
+    cls.prepare_instance()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 163, in prepare_instance
+    cls.backend.save_instance_output()
+TypeError: save_instance_output() takes no arguments (1 given)
+0
+]
+tags: -worker-0

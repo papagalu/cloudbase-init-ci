@@ -1,0 +1,23 @@
+time: 2017-06-29 07:56:22.314114Z
+tags: worker-0
+test: setUpClass (tests.ScenarioNoError)
+time: 2017-06-29 07:56:22.314114Z
+failure: setUpClass (tests.ScenarioNoError) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+310
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 144, in setUpClass
+    cls.prepare_instance()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 162, in prepare_instance
+    cls.prepare_recipe()
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/cloud/base.py", line 31, in prepare_recipe
+    return cls.recipe.prepare(service_type=cls.service_type)
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/base.py", line 193, in prepare
+    self.inject_cbinit_config()
+  File "/root/workspace/cloudbase-init-ci/argus/recipes/cloud/windows.py", line 349, in inject_cbinit_config
+    self._cbinit_conf.apply_config(conf_dir)
+AttributeError: 'NoneType' object has no attribute 'apply_config'
+0
+]
+tags: -worker-0

@@ -1,0 +1,53 @@
+time: 2017-06-28 16:54:46.139252Z
+tags: worker-0
+test: setUpClass (tests.ScenarioPasswordLength)
+time: 2017-06-28 16:54:46.139252Z
+failure: setUpClass (tests.ScenarioPasswordLength) [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+D8F
+Traceback (most recent call last):
+  File "/root/workspace/cloudbase-init-ci/argus/scenarios/base.py", line 141, in setUpClass
+    cls.availability_zone)
+  File "/root/workspace/cloudbase-init-ci/argus/backends/tempest/tempest_backend.py", line 82, in __init__
+    self._manager = api_manager.APIManager()
+  File "/root/workspace/cloudbase-init-ci/argus/backends/tempest/manager.py", line 40, in __init__
+    self.__class__.__name__, network_resources={})
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/common/credentials_factory.py", line 161, in get_credentials_provider
+    'identity_admin', fill_in=True, identity_version=identity_version)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/common/credentials_factory.py", line 275, in get_configured_credentials
+    identity_version=identity_version, **params)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/common/credentials_factory.py", line 304, in get_credentials
+    **params)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/auth.py", line 535, in get_credentials
+    creds = auth_provider.fill_credentials()
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/auth.py", line 82, in fill_credentials
+    auth_data = self.get_auth()
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/auth.py", line 102, in get_auth
+    self.set_auth()
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/auth.py", line 111, in set_auth
+    self.cache = self._get_auth()
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/auth.py", line 243, in _get_auth
+    token, auth_data = auth_func(**auth_params)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/services/identity/v2/token_client.py", line 104, in get_token
+    body = self.auth(user, password, tenant)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/services/identity/v2/token_client.py", line 54, in auth
+    resp, body = self.post(self.auth_url, body=body)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/common/rest_client.py", line 259, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/services/identity/v2/token_client.py", line 89, in request
+    headers=headers, body=body)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/common/rest_client.py", line 559, in raw_request
+    headers=headers, body=body)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/tempest/lib/common/http.py", line 25, in request
+    return super(ClosingHttp, self).request(*args, **new_kwargs)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/httplib2/__init__.py", line 1659, in request
+    (response, content) = self._request(conn, authority, uri, request_uri, method, body, headers, redirections, cachekey)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/httplib2/__init__.py", line 1399, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+  File "/root/.venv/argus-ci/local/lib/python2.7/site-packages/httplib2/__init__.py", line 1325, in _conn_request
+    raise ServerNotFoundError("Unable to find the server at %s" % conn.host)
+httplib2.ServerNotFoundError: Unable to find the server at <local ip>
+0
+]
+tags: -worker-0
