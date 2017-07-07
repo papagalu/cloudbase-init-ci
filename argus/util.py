@@ -28,7 +28,10 @@ import unittest
 import types
 import os
 import tempfile
-import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 import gzip
 
 import six
@@ -162,8 +165,8 @@ def sanitize_command_output(content):
     """Sanitizes the output got from underlying instances.
 
     Sanitizes the output by only returning unicode characters,
-    any other junk/strange characters will be ignore, and will
-    also strip down the content of unrequired spaces and newlines.
+    any other characters will be ignored, and will also strip
+    down the content of unrequired spaces and newlines.
     """
     return six.text_type(content, errors='ignore').strip()
 
@@ -248,7 +251,7 @@ def gzip_data(data):
 
     :param data: The data we want to compress.
     """
-    buff = StringIO.StringIO()
+    buff = StringIO()
     with gzip.GzipFile(fileobj=buff, mode="w") as fd:
         fd.write(data)
     return buff.getvalue()
@@ -410,14 +413,14 @@ WINDOWS_NANO = "windows_nano"
 
 # The key has this format:
 # (Major version number, Minor version number, Product Type)
-# Version number according to this page :
+# Version number according to this page:
 # https://msdn.microsoft.com/en-us/library/windows/desktop/ms724833%28v=vs.85%29.aspx
-# Product Type according to this :
+# Product Type according to this:
 # https://msdn.microsoft.com/en-us/library/aa394239(v=vs.85).aspx
 # For the Major Version 10 Server edition we have two possibilities:
 # 1. is Windows Nano Server
 # 2. is not Windows Nano Server (so it's Windows Server 2016)
-# IsNanoserver False/True based on this code : https://goo.gl/UD27SK
+# IsNanoserver False/True based on this code: https://goo.gl/UD27SK
 
 WINDOWS_VERSION = {
     (6, 2, 1): WINDOWS8,
