@@ -16,7 +16,7 @@
 import unittest
 
 from argus.backends.heat import heat_backend
-from argus.backends.tempest import manager as tempest_manager
+from argus.backends.tempest.manager import APIManager as tempest_manager
 from argus.backends.tempest import cloud as tempest_cloud_backend
 from argus.backends.tempest import tempest_backend
 from argus.backends.local import local_backend
@@ -212,7 +212,7 @@ class ScenarioLocalScripts(BaseWindowsScenario):
     recipe_type = recipe.CloudbaseinitLocalScriptsRecipe
 
 
-@unittest.skipIf('configdrive_vfat_drive' not in tempest_manager.availability_zones(),
+@unittest.skipIf('configdrive_vfat_drive' not in tempest_manager.availability_zones,
                  'Needs special availability zone')
 class ScenarioConfigdriveVfatDriveSmoke(BaseWindowsScenario):
     test_classes = (test_smoke.TestSmoke, )
@@ -220,7 +220,7 @@ class ScenarioConfigdriveVfatDriveSmoke(BaseWindowsScenario):
     availability_zone = 'configdrive_vfat_drive'
 
 
-@unittest.skipIf('configdrive_vfat_cdrom' not in tempest_manager.availability_zones(),
+@unittest.skipIf('configdrive_vfat_cdrom' not in tempest_manager.availability_zones,
                  'Needs special availability zone')
 class ScenarioConfigdriveVfatCdromSmoke(BaseWindowsScenario):
     test_classes = (test_smoke.TestSmoke, )
@@ -228,7 +228,7 @@ class ScenarioConfigdriveVfatCdromSmoke(BaseWindowsScenario):
     availability_zone = 'configdrive_vfat_cdrom'
 
 
-@unittest.skipIf('configdrive_iso9660_drive' not in tempest_manager.availability_zones(),
+@unittest.skipIf('configdrive_iso9660_drive' not in tempest_manager.availability_zones,
                  'Needs special availability zone')
 class ScenarioConfigdriveIso9660DriveSmoke(BaseWindowsScenario):
     test_classes = (test_smoke.TestSmoke, )
@@ -236,7 +236,7 @@ class ScenarioConfigdriveIso9660DriveSmoke(BaseWindowsScenario):
     availability_zone = 'configdrive_iso9660_drive'
 
 
-@unittest.skipIf('configdrive_iso9660_cdrom' not in tempest_manager.availability_zones(),
+@unittest.skipIf('configdrive_iso9660_cdrom' not in tempest_manager.availability_zones,
                  'Needs special availability zone')
 class ScenarioConfigdriveIso9660CdromSmoke(BaseWindowsScenario):
     test_classes = (test_smoke.TestSmoke, )

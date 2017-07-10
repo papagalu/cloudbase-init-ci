@@ -28,18 +28,12 @@ OUTPUT_SIZE = 128
 OUTPUT_EPSILON = int(OUTPUT_SIZE / 10)
 LOG = argus_log.LOG
 
-def availability_zones():
-    api_manager = None
-    try:
-        api_manager = APIManager()
-        zones = api_manager.availability_zone_client.list_availability_zones()
-        info = zones['availabilityZoneInfo']
-        return {zone['zoneName'] for zone in info}
-    except:
-        return {}
-    finally:
-        if api_manager:
-            api_manager.cleanup_credentials()
+class classproperty(object):
+    def __init__(self, fget):
+        self.fget = fget
+    def __get__(self, owner_self, owner_cls):
+        return self.fget(owner_cls)
+
 
 class APIManager(object):
     """The APIManager for interacting between modules.
@@ -164,6 +158,14 @@ class APIManager(object):
         except Exception as exc:
             raise exceptions.ArgusError('Could not get the MTU from the '
                                         'tempest backend: %s' % exc)
+    @classproperty
+    def availability_zones(self):
+        try:
+            zones = self.api_manager.availability_zone_client.list_availability_zones()
+            info = zones['availabilityZoneInfo']
+            return {zone['zoneName'] for zone in info}
+        except:
+            return {}
 
 
 class Keypair(object):
