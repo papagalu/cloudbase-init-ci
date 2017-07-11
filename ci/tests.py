@@ -259,9 +259,15 @@ class ScenarioPasswordLength(BaseWindowsScenario):
     recipe_type = recipe.CloudbaseinitPasswordRecipe
 
 
-class ScenarioNoError(BaseWindowsScenario):
+class ScenarioNoService(BaseWindowsScenario):
 
     backend_type = local_backend.LocalBackend
     test_classes = (smoke.TestNoError,)
-    recipe_type = recipe.CloudbaseinitRecipe
+    recipe_type = recipe.NoopRecipe
     service_type = util.NO_SERVICE
+
+class ScenarioLocalBackendHttpMetadata(BaseWindowsScenario):
+
+    backend_type = local_backend.LocalBackend
+    test_classes = (smoke.TestNoError,)
+    recipe_type = recipe.NoopRecipe

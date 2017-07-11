@@ -831,3 +831,9 @@ class CloudbaseinitPasswordRecipe(CloudbaseinitWinrmRecipe):
         self._cbinit_conf.set_conf_value(
             name="user_password_length",
             value="3")
+
+
+class NoopRecipe(CloudbaseinitRecipe):
+
+    def delete_mock_metadata(self):
+        pass

@@ -16,6 +16,7 @@
 from argus.backends import base as base_backend
 from argus.backends import windows as windows_backend
 from argus import config as argus_config
+from argus.backends.local import keypair as local_keypair
 
 CONFIG = argus_config.CONFIG
 
@@ -56,3 +57,10 @@ class LocalBackend(windows_backend.WindowsBackendMixin,
 
     def floating_ip(self):
         return self._ip
+
+    def public_key(self):
+        keypair = local_keypair.LocalKeyPair()
+        return keypair.public_key
+
+    def instance_server(self):
+        return {"name": "hardcoded_string"}
